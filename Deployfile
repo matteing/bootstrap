@@ -1,0 +1,36 @@
+.PHONY: all hermes_web hermes_server
+
+DEPLOYFILE_PATH=~/Projects/Deployfile
+
+.DEFAULT_GOAL := all
+
+all: ; @echo "No target to deploy."
+
+hermes:
+	@tmux \
+	    new-session  "make -f $(DEPLOYFILE_PATH) hermes_web" \; \
+	    split-window -h "make -f $(DEPLOYFILE_PATH) hermes_server" \; \
+	    set -g mouse on \; \
+	    set synchronize-panes on \; \
+	    # set remain-on-exit on \; \
+	    
+
+hermes_web:
+	@printf "`tput bold; tput setaf 2;`Deploying web...`tput sgr0`\n";
+	@cd ~/Projects/hermes-web/; \
+		git push dokku master && \
+		osascript -e 'display notification "hermes_web exited successfully." with title "Deployment succeeded"' || \
+		osascript -e 'display notification "hermes_web failed to deploy" with title "Deployment failed"'
+	@if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; }; then read -n 1 -s -r -p "Press any key to continue..."; fi;
+
+hermes_server:
+	@printf "`tput bold; tput setaf 2;`Deploying server...`tput sgr0`\n";
+	@cd ~/Projects/hermes-server/; \
+		git push dokku master && \
+		osascript -e 'display notification "hermes_server exited successfully." with title "Deployment succeeded"' || \
+		osascript -e 'display notification "hermes_server failed to deploy" with title "Deployment failed"'
+	@if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; }; then read -n 1 -s -r -p "Press any key to continue..."; fi;
+
+makerlog:
+	@printf "`tput bold; tput setaf 2;`Deploying server...`tput sgr0`\n";
+	@cd ~/Projects/makerlog-server/; git push dokku master
