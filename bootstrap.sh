@@ -32,7 +32,7 @@ echo "${green}Installing latest Homebrew...${reset}"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "${green}Installing VS Code..."
-# brew cask install visual-studio-code
+brew cask install visual-studio-code
 
 echo "${green}Setting up Code command...${reset}"
 cat << EOF >> $CFG_FILE
@@ -52,6 +52,7 @@ echo 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' 
 
 echo "${green}Installing Python...${reset}"
 pyenv install 3.7.5
+pyenv use 3.7.5
 
 echo "${green}Installing pipenv...${reset}"
 brew install pipenv
