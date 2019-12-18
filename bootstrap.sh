@@ -48,7 +48,6 @@ nvm install --lts
 
 echo "${green}Installing pyenv...${reset}"
 brew install pyenv
-echo 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> $ENV_FILE
 
 echo "${green}Installing Python...${reset}"
 pyenv install 3.7.5
