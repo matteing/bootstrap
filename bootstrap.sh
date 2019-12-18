@@ -72,4 +72,8 @@ brew install tmux
 echo "${green}Installing sample Deployfile...${reset}"
 cp ./Deployfile ~/Projects/
 
+echo "${green}Installing Fira Code...${reset}"
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+
 echo "${green}Finished.${reset}"
