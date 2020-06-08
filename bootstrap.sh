@@ -3,7 +3,7 @@
 # Sets up my Mac for development.
 
 SCRIPTDIR="$(dirname "$0")"
-THEME="steef"
+THEME="steeef"
 
 red=`tput setaf 1`
 green=`tput setaf 2`
