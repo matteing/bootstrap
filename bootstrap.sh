@@ -47,11 +47,12 @@ echo "${green}Installing NodeJS LTS...${reset}"
 nvm install --lts
 
 echo "${green}Installing pyenv...${reset}"
-brew install pyenv
+# brew install pyenv
 
 echo "${green}Installing Python...${reset}"
-pyenv install 3.7.5
-pyenv use 3.7.5
+brew install python3
+# pyenv install 3.7.5
+# pyenv use 3.7.5
 
 echo "${green}Installing pipenv...${reset}"
 brew install pipenv
@@ -59,6 +60,14 @@ brew install pipenv
 echo "${green}Installing IDEs...${reset}"
 brew cask install webstorm
 brew cask install pycharm
+
+
+echo "${green}Installing Other stuff...${reset}"
+brew cask install iterm2
+brew cask install keepassxc
+brew cask install google-chrome-beta
+brew cask install telegram
+
 
 echo "${green}Installing Fork...${reset}"
 brew cask install fork
