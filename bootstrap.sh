@@ -67,6 +67,7 @@ brew cask install iterm2
 brew cask install keepassxc
 brew cask install google-chrome-beta
 brew cask install telegram
+brew cask install spotify
 
 
 echo "${green}Installing Fork...${reset}"
