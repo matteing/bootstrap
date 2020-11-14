@@ -34,29 +34,6 @@ echo "${green}Installing latest Homebrew...${reset}"
 echo "${green}Installing VS Code..."
 brew cask install visual-studio-code
 
-echo "${green}Setting up Code command...${reset}"
-cat << EOF >> $CFG_FILE
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-EOF
-
-echo "${green}Installing NVM...${reset}"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-
-echo "${green}Installing NodeJS LTS...${reset}"
-nvm install --lts
-
-echo "${green}Installing pyenv...${reset}"
-# brew install pyenv
-
-echo "${green}Installing Python...${reset}"
-brew install python3
-# pyenv install 3.7.5
-# pyenv use 3.7.5
-
-echo "${green}Installing pipenv...${reset}"
-brew install pipenv
-
 echo "${green}Installing IDEs...${reset}"
 brew cask install webstorm
 brew cask install pycharm
@@ -65,22 +42,18 @@ brew cask install pycharm
 echo "${green}Installing Other stuff...${reset}"
 brew cask install iterm2
 brew cask install keepassxc
-brew cask install google-chrome-beta
+brew cask install google-chrome
 brew cask install telegram
 brew cask install spotify
+brew cask install authy
+brew cask install docker
+brew cask install whatsapp
+brew cask install slack
+brew cask install sublime-text
 
 
 echo "${green}Installing Fork...${reset}"
 brew cask install fork
-
-echo "${green}Installing Redis...${reset}"
-brew install redis
-
-echo "${green}Installing tmux...${reset}"
-brew install tmux
-
-echo "${green}Installing sample Deployfile...${reset}"
-cp ./Deployfile ~/Projects/
 
 echo "${green}Installing Fira Code...${reset}"
 brew tap homebrew/cask-fonts
