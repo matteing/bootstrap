@@ -1,11 +1,8 @@
-alias deploy="make -f ~/Projects/Deployfile"
 alias django="python3 manage.py"
 
 function redis() {
     redis-server --save "" --appendonly no
 }
 
-# Setting up pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+# export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
