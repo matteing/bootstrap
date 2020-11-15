@@ -52,6 +52,7 @@ brew cask install slack
 brew cask install sublime-text
 brew install node@12
 brew install python3
+brew install awsebcli
 
 
 echo "${green}Installing Fork...${reset}"
