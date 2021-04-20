@@ -46,13 +46,8 @@ brew cask install google-chrome
 brew cask install telegram
 brew cask install spotify
 brew cask install authy
-brew cask install docker
 brew cask install whatsapp
-brew cask install slack
 brew cask install sublime-text
-brew install node@12
-brew install python3
-brew install awsebcli
 
 
 echo "${green}Installing Fork...${reset}"
@@ -61,5 +56,13 @@ brew cask install fork
 echo "${green}Installing Fira Code...${reset}"
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
+
+echo "${green}Installing languages...${reset}"
+brew install nvm
+nvm install --lts
+nvm use --lts
+brew install pyenv
+pyenv install 3.9.4
+pyenv global 3.9.4
 
 echo "${green}Finished.${reset}"
