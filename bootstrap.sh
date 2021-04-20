@@ -48,6 +48,7 @@ brew cask install spotify
 brew cask install authy
 brew cask install whatsapp
 brew cask install sublime-text
+brew cask install appcleaner
 
 
 echo "${green}Installing Fork...${reset}"
