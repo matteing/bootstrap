@@ -66,5 +66,6 @@ brew install pyenv
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 pyenv install 3.9.4
 pyenv global 3.9.4
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 echo "${green}Finished.${reset}"
