@@ -32,31 +32,31 @@ echo "${green}Installing latest Homebrew...${reset}"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "${green}Installing VS Code..."
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 
 echo "${green}Installing IDEs...${reset}"
-brew cask install webstorm
-brew cask install pycharm
+brew install --cask webstorm
+brew install --cask pycharm
 
 
 echo "${green}Installing Other stuff...${reset}"
-brew cask install iterm2
-brew cask install keepassxc
-brew cask install google-chrome
-brew cask install telegram
-brew cask install spotify
-brew cask install authy
-brew cask install whatsapp
-brew cask install sublime-text
-brew cask install appcleaner
+brew install --cask iterm2
+brew install --cask keepassxc
+brew install --cask google-chrome
+brew install --cask telegram
+brew install --cask spotify
+brew install --cask authy
+brew install --cask whatsapp
+brew install --cask sublime-text
+brew install --cask appcleaner
 
 
 echo "${green}Installing Fork...${reset}"
-brew cask install fork
+brew install --cask fork
 
 echo "${green}Installing Fira Code...${reset}"
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
+brew install --cask font-fira-code
 
 echo "${green}Installing languages...${reset}"
 brew install nvm
