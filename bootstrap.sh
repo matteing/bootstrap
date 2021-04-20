@@ -63,6 +63,7 @@ brew install nvm
 nvm install --lts
 nvm use --lts
 brew install pyenv
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 pyenv install 3.9.4
 pyenv global 3.9.4
 
