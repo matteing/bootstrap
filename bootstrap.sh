@@ -49,6 +49,7 @@ brew install --cask authy
 brew install --cask whatsapp
 brew install --cask sublime-text
 brew install --cask appcleaner
+brew install --cask rectangle
 
 
 echo "${green}Installing Fork...${reset}"
