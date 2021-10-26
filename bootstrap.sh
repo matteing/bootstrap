@@ -29,7 +29,7 @@ cat "$SCRIPTDIR/.zshrc" >> "$CFG_FILE"
 perl -pi -e  "s/robbyrussell/$THEME/g" ~/.zshrc
 
 echo "${green}Installing latest Homebrew...${reset}"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "${green}Installing VS Code..."
 brew install --cask visual-studio-code
@@ -67,6 +67,7 @@ brew install pyenv
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 pyenv install 3.9.4
 pyenv global 3.9.4
+source ~/.zshrc
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 echo "${green}Finished.${reset}"
