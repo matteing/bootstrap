@@ -25,7 +25,7 @@ echo "${green}Installing oh-my-zsh...${reset}"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 echo "${green}Installing shell profile...${reset}"
-cat "$SCRIPTDIR/.zshrc" >> "$CFG_FILE"
+cat "$SCRIPTDIR/.zshrc" >> ~/.zshrc
 perl -pi -e  "s/robbyrussell/$THEME/g" ~/.zshrc
 
 echo "${green}Installing latest Homebrew...${reset}"
