@@ -36,15 +36,17 @@ brew install --cask visual-studio-code
 
 echo "${green}Installing Other stuff...${reset}"
 brew install --cask iterm2
-brew install --cask keepassxc
 brew install --cask google-chrome
 brew install --cask telegram
 brew install --cask spotify
-brew install --cask authy
 brew install --cask whatsapp
 brew install --cask sublime-text
 brew install --cask appcleaner
 brew install --cask rectangle
+brew install --cask tableplus
+brew install --cask discord
+brew install --cask postman
+brew install --cask postman
 
 
 echo "${green}Installing Fork...${reset}"
@@ -68,3 +70,5 @@ pyenv global 3.9.4
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 echo "${green}Finished.${reset}"
+echo "${green}Remember to install Bitwarden, Amphetamine, Postgres.app, Todoist, Authy.${reset}"
+
