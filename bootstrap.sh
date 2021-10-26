@@ -3,7 +3,7 @@
 # Sets up my Mac for development.
 
 SCRIPTDIR="$(dirname "$0")"
-THEME="steeef"
+THEME="ys"
 
 red=`tput setaf 1`
 green=`tput setaf 2`
@@ -33,11 +33,6 @@ echo "${green}Installing latest Homebrew...${reset}"
 
 echo "${green}Installing VS Code..."
 brew install --cask visual-studio-code
-
-echo "${green}Installing IDEs...${reset}"
-brew install --cask webstorm
-brew install --cask pycharm
-
 
 echo "${green}Installing Other stuff...${reset}"
 brew install --cask iterm2
